@@ -43,63 +43,107 @@ const extractUrlsFromText = () => {
 </template>
 
 <style scoped>
+/* 基础样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 页面容器 - 实现垂直水平居中 */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f7f5;
+}
+
+/* 主容器样式 */
 .container {
-  max-width: 600px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* 标题样式 */
+h1 {
+  color: #27ae60;
+  font-size: 2rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
+/* 输入区域样式 */
 .textarea {
   width: 100%;
-}
-
-.btn {
-  width: 100%;
-  padding: 12px 24px;
-}
-
-.btn {
-  width: 100%;
-  padding: 8px 16px;
-  background-color: #42b983;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #359469;
-}
-
-.textarea {
-  width: 100%;
-  margin: 0 16px;
-  padding: 0.8rem;
-  border: 1px solid #4CAF50;
-  border-radius: 4px;
+  padding: 1rem;
+  border: 2px solid #2ecc71;
+  border-radius: 6px;
   font-size: 1rem;
-  min-height: 100px;
+  min-height: 120px;
   resize: vertical;
-  background-color: #f9f9f9;
   transition: all 0.3s ease;
-  box-shadow: none;
+  background-color: #ffffff;
 }
 
 .textarea:focus {
   outline: none;
-  border-color: #2E7D32;
-  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+/* 按钮样式 */
+.btn {
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #219653;
+  transform: translateY(-2px);
+}
+
+/* 结果区域样式 */
+.result {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+}
+
+.result h3 {
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.result ul {
+  list-style: none;
+  padding: 0;
+}
+
+.result li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
   background-color: #ffffff;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+.input-group {
+  width: 100%;
 }
 </style>
