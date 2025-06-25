@@ -21,7 +21,7 @@ const extractUrlsFromText = () => {
 
 <template>
   <div class="container">
-    <h1>URL 缩短工具</h1>
+    <h1>提取链接</h1>
     <div class="input-group">
       <textarea 
         v-model="xiaohongshuText" 
@@ -31,7 +31,7 @@ const extractUrlsFromText = () => {
       ></textarea>
     </div>
     <div class="input-group">
-      <button @click="extractUrlsFromText">提取链接</button>
+      <button @click="extractUrlsFromText" class="btn">提取链接</button>
     </div>
     <div v-if="urls.length" class="result">
       <h3>提取到的链接：</h3>
@@ -51,19 +51,30 @@ const extractUrlsFromText = () => {
 }
 
 .input-group {
-  margin-top: 2rem;
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-button {
-  padding: 0.8rem 1.5rem;
-  background-color: #42b883;
+.textarea {
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 24px;
+}
+
+.btn {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #42b983;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 1rem;
   transition: background-color 0.3s;
 }
 
@@ -72,7 +83,8 @@ button:hover {
 }
 
 .textarea {
-  flex: 1;
+  width: 100%;
+  margin: 0 16px;
   padding: 0.8rem;
   border: 1px solid #4CAF50;
   border-radius: 4px;
