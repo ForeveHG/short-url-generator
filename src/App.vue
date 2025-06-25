@@ -25,7 +25,7 @@ const extractUrlsFromText = () => {
     <div class="input-group">
       <textarea 
         v-model="xiaohongshuText" 
-        placeholder="粘贴小红书分享的文本" 
+        placeholder="粘贴文本内容，并提取其中的链接..." 
         rows="4"
         class="textarea"
       ></textarea>
