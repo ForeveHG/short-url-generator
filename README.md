@@ -1,6 +1,6 @@
 # Vue 3 + TypeScript + Vite
 
-试了下trae ide生成了个简单的项目，顺便记录下
+用trae ide生成了个简单的项目，全程无手敲实现了个简单的提取链接功能，顺便记录下
 
 This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
